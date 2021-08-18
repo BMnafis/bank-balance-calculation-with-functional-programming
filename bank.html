@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Home Page</title>
+    <!-- tailwind css -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom css -->
+    <style></style>
+  </head>
+  <body>
+    <h1 class="text-5xl text-center mt-4 text-yellow-600 font-medium">
+      Welcome to my Bank Dashboard
+    </h1>
+    <section class="balance-container w-3/4 mx-auto mt-14">
+      <div class="balances grid grid-cols-3 gap-4 text-center">
+        <div class="bg-blue-400 p-8 text-white rounded">
+          <h3 class="text-4xl mb-2">Deposit</h3>
+          <p class="text-4xl">$ <span id="total-deposit">400</span></p>
+        </div>
+
+        <div class="bg-green-400 p-8 text-white rounded">
+          <h3 class="text-4xl mb-2">Withdraw</h3>
+          <p class="text-4xl">$ <span id="total-withdraw">120</span></p>
+        </div>
+
+        <div class="bg-purple-400 p-8 text-white rounded">
+          <h3 class="text-4xl mb-2">Balance</h3>
+          <p class="text-4xl">$ <span id="total-balance">1100</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="d-w-calculator w-3/4 mx-auto mt-14">
+      <div class="grid grid-cols-2 gap-8">
+        <div class="bg-gray-300 px-8 pt-4 pb-8">
+          <h3 class="text-4xl text-center text-blue-600 font-medium">
+            Deposit Amount
+          </h3>
+          <div class="mt-8">
+            <input
+              id="deposit-input"
+              class="w-full block text-2xl p-2"
+              type="text"
+              placeholder="Amount in number"
+            />
+          </div>
+          <div class="mt-4">
+            <button
+              id="deposit-btn"
+              class="bg-pink-500 text-white px-8 py-2 font-medium"
+            >
+              Deposit
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-300 px-8 pt-4 pb-8">
+          <h3 class="text-4xl text-center text-yellow-800 font-medium">
+            Withdraw Amount
+          </h3>
+          <div class="mt-8">
+            <input
+              id="withdraw-input"
+              class="w-full block text-2xl p-2"
+              type="text"
+              placeholder="Amount in number"
+            />
+            <div id="withdraw-error"></div>
+          </div>
+          <div class="mt-4">
+            <button
+              id="withdraw-btn"
+              class="bg-purple-500 text-white px-8 py-2 font-medium"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Javascript -->
+    <script src="js/functional-bank.js"></script>
+  </body>
+</html>
